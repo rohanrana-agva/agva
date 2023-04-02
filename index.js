@@ -57,7 +57,9 @@ app.all('*', (req, res, next) => {
 
   next();
 });
-
+app.get("/",async(req,res)=>{
+  res.send("all api is set")
+});
 const PORT = process.env.PORT || 5000;
 
 module.exports = app.listen(PORT, () => console.log(`active on port ${PORT}`));
